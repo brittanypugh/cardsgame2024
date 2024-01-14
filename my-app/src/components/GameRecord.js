@@ -1,12 +1,12 @@
 import PlayerInfo from "./PlayerInfo";
 
-export default function GameRecord({playerOne, playerTwo}) {
+export default function GameRecord({remaining, playerOneScore, playerTwoScore}) {
 
     return (
         <div>
-        <PlayerInfo name={playerOne.name} score={playerOne.score} deck={playerOne.deck} />
+        <PlayerInfo name="Player One" score={playerOneScore} remaining={remaining}/>
         <hr />
-        <PlayerInfo name={playerTwo.name} score={playerTwo.score} deck={playerTwo.deck} />
+        <PlayerInfo name="Player Two" score={playerTwoScore} remaining={remaining}/>
 
         </div>
     );
