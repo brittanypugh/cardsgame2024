@@ -1,10 +1,10 @@
-export default function PlayerInfo({player, score, deck}) {
+export default function PlayerInfo({name, score, deck}) {
 
     return (
         <div>
-            <h2>{player}</h2>
-            <p>{player}'s current score is: {score}</p>
-            <p> the deck is {deck}</p>
+            <h2>{name}</h2>
+            <p>{name}'s current score is: {score}</p>
+            <p>Cards remaining in the deck: {deck.remaining}</p>
         </div>
     );
 }
