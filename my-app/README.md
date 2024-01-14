@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+
+# cardsgame2024
+
+Play the card game War using the API found at deckofcardsapi.com
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
