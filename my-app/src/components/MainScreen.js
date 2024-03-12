@@ -19,7 +19,7 @@ export default function MainScreen() {
       .then(response => response.json())
       .then(json => setPlayerOne({ deck: json }))
       .catch(error => {
-        console.log('Received an error when fetching a new deck!');
+        console.error('Received an error when fetching a new deck!');
         console.error(error);
       });
 
@@ -27,7 +27,7 @@ export default function MainScreen() {
       .then(response => response.json())
       .then(json => setPlayerTwo({ deck: json }))
       .catch(error => {
-        console.log('Received an error when fetching a new deck!');
+        console.error('Received an error when fetching a new deck!');
         console.error(error);
       });
   }, []); // PS: semicolon
@@ -46,11 +46,10 @@ export default function MainScreen() {
     )
       .then(response => response.json())
       .then(json => {
-        console.log(json);
         setPlayerOneCard(parseInt(json.cards[0].value));
       }) // PS: wrong score for face cards
       .catch(error => {
-        console.log('Received an error when drawing a card from the deck!');
+        console.error('Received an error when drawing a card from the deck!');
         console.error(error);
       });
 
@@ -60,7 +59,7 @@ export default function MainScreen() {
       .then(response => response.json())
       .then(json => setPlayerTwoCard(parseInt(json.cards[0].value)))
       .catch(error => {
-        console.log('Received an error when drawing a card from the deck!');
+        console.error('Received an error when drawing a card from the deck!');
         console.error(error);
       });
 
