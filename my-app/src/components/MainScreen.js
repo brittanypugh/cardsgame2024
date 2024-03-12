@@ -30,9 +30,8 @@ export default function MainScreen() {
         console.error('Received an error when fetching a new deck!');
         console.error(error);
       });
-  }, []); // PS: semicolon
+  }, []);
   function handleStartGameButtonClick() {
-    // PS: weird spacing
     setStartGame(!startGame);
   }
 
@@ -47,7 +46,7 @@ export default function MainScreen() {
       .then(response => response.json())
       .then(json => {
         setPlayerOneCard(parseInt(json.cards[0].value));
-      }) // PS: wrong score for face cards
+      })
       .catch(error => {
         console.error('Received an error when drawing a card from the deck!');
         console.error(error);
@@ -68,7 +67,7 @@ export default function MainScreen() {
     }
     if (playerTwoCard > playerOneCard) {
       setPlayerTwoScore(prevScore => prevScore + 1);
-    } //else it's a draw (no one scores a point)
+    } // else it's a draw (no one scores a point)
     setRemaining(prevValue => prevValue - 1);
   }
 
